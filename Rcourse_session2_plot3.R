@@ -1,4 +1,4 @@
-#The R code to create this map is take from https://datatricks.co.uk/creating-maps-in-r-2019
+#The R code to create this map is taken from https://datatricks.co.uk/creating-maps-in-r-2019
 
 #Clear the memory
 rm(list=ls())

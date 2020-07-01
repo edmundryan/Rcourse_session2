@@ -36,7 +36,7 @@ lines(c(0,250),c(0,250),type="l",col="red",lwd=3,lty=2)
 par(mar=c(4,6,8,4))
 plot(GPP.ctrl,GPP.temp,type="p", col="blue", pch=4, lwd=2, cex=1.5,
      xlab=expression(paste("GPP for control (gC/",m^2,"/day)"),sep=""),
-     ylab=expression(paste("GPP for elevated warming (gC/",m^2,"/day)"),sep=""),
+     ylab=expression(paste("GPP for warming (gC/",m^2,"/day)"),sep=""),
      cex.lab=2, cex.axis=2, xlim=c(0,250), ylim=c(0,250))
 title(expression(paste("Daily GPP (control vs warming)",sep="")),line=1.5,cex.main=3)
 lines(c(0,250),c(0,250),type="l",col="red",lwd=3,lty=2)
@@ -59,7 +59,7 @@ barplot(GPP.sum,names.arg=c("Control",expression("eCO"[2]),"Warming",expression(
         col=c("grey","darkgoldenrod4","blue","dark green"), 
         ylab=expression(paste("6-year GPP (gC/",m^2,"/day)"),sep=""),
         cex.names=2,cex.lab=2, cex.axis=2)
-title(expression(paste("6 year GPP for all four treatments)",sep="")),line=1.5,cex.main=3)
+title(expression(paste("6 year GPP for all four treatments",sep="")),line=1.5,cex.main=3)
 #title("6-year GPP for all four treatments",line=1.5,cex.main=3)
 
 #Main title
