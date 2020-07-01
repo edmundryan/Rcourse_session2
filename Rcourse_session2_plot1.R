@@ -1,7 +1,7 @@
 #Clear the memory
 rm(list = ls())
 
-#Set the working directory (this is the directory where your files for session 2 are stored):
+#Set the working directory (this is where your files are stored):
 setwd('C:/Work/Rcourse/Session2') 
 
 #Import data:

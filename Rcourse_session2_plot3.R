@@ -23,7 +23,7 @@ library(rgeos)
 library(broom)
 library(plyr)
 
-#Set the working directory (this is the directory where your files for session 2 are stored):
+#Set the working directory (this is where your files are stored):
 setwd('C:/Work/Rcourse/Session2') 
 
 #Import the folder called 'NUTS_Level_2__January_2018__Boundaries-shp' using the instructions 
@@ -35,14 +35,12 @@ shapefile <- readOGR(dsn="NUTS_Level_2__January_2018__Boundaries-shp",
 
 #Reshape for ggplot2 using the Broom package
 mapdata <- tidy(shapefile, region="nuts218nm") #This might take a few minutes
-write.csv(mapdata,"mapdata.csv")
 
 #Create some data to use in the heatmap - here we are creating a random "value" for each county (by id)
 mydata <- data.frame(id=unique(mapdata$id), value=sample(c(0:100), length(unique(mapdata$id)), replace = TRUE))
 
 #Join mydata with mapdata
 df <- join(mapdata, mydata, by="id")
-write.csv(mapdata,"mapdata.csv")
 
 #Exporting the plot to a jpeg file:
 file.name=paste("UK_heatmap_example.jpeg")

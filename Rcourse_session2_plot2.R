@@ -1,7 +1,7 @@
 #Clear the memory
 rm(list = ls())
 
-#Set the working directory (this is the directory where your files for session 2 are stored):
+#Set the working directory (this is where your files are stored):
 setwd('C:/Work/Rcourse/Session2') 
 
 #Import data:
@@ -56,11 +56,10 @@ RowID=c(1:dim(my.data)[1])
 RowID.noNA=RowID[is.na(GPP.ctrl)==FALSE]  #remove the rows with NAs
 GPP.sum = apply(my.data[RowID.noNA,3:6],2,sum)
 barplot(GPP.sum,names.arg=c("Control",expression("eCO"[2]),"Warming",expression("eCO"[2]* " and warming")),
-        col=c("grey","darkgoldenrod4","blue","dark green"), 
+        col=c("grey","darkgoldenrod4","blue","dark green"),
         ylab=expression(paste("6-year GPP (gC/",m^2,"/day)"),sep=""),
         cex.names=2,cex.lab=2, cex.axis=2)
 title(expression(paste("6 year GPP for all four treatments",sep="")),line=1.5,cex.main=3)
-#title("6-year GPP for all four treatments",line=1.5,cex.main=3)
 
 #Main title
 mtext(text="Gross primary production (GPP) on daily scale (panels 1-3) and six-year scale (panel 4)",
