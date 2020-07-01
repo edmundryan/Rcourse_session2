@@ -1,9 +1,11 @@
 #Clear the memory
 rm(list = ls())
 
-#Set the working directory and import data
-setwd('C:/Work/Rcourse/Session1') 
-my.data=read.csv('PHACE_photosynthesis_data.csv',header=TRUE)
+#Set the working directory (this is the directory where your files for session 2 are stored):
+setwd('C:/Work/Rcourse/Session2') 
+
+#Import data:
+my.data=read.csv('../Session1/PHACE_photosynthesis_data.csv',header=TRUE)
 
 #Specify the columns of the csv file:
 names(my.data)
@@ -82,7 +84,6 @@ legend(0,250,c("Control treatment","elevated CO2"),lty=1, lwd=lw.set,
        col=c("black","red"))
 
 #Step 10 - exporting the plot to a jpeg
-setwd('C:/Work/Rcourse/Session2') 
 file.name=paste("DailyGPP_2008_ctrl_vs_eCO2.jpeg")
 jpeg(file.name,width=1200, height=900)
 lw.set=2

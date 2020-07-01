@@ -20,7 +20,7 @@ GPP.eCO2temp=my.data$Heating_eCO2
 file.name=paste("DailyGPP_ctrl_vs_othertreatments.jpeg")
 jpeg(file.name,width=1500, height=900)
 
-#specify the number and layout of hte subplots:
+#specify the number and layout of the subplots:
 par(mfrow=c(2,2))
 
 #First subplot
