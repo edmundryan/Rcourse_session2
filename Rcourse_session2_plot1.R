@@ -38,7 +38,7 @@ plot(x,y.ctrl,type="l", col="black",
      ylab=expression(paste("Gross primary production ( ",gC/m^2,"/day)",sep="")))
 
 #Step 5 - widen the margins
-par(mar=c(5,5,5,5))
+par(mar=c(5,5,3,2))
 plot(x,y.ctrl,type="l", col="black",
      main=c("Simulated Gross Primary Production for 2008"),
      xlab=c("Growing season day number (Day 1 = 1st March 2008)"), 
@@ -84,7 +84,7 @@ legend(0,250,c("Control treatment","elevated CO2"),lty=1, lwd=lw.set,
        col=c("black","red"))
 
 #Step 10 - exporting the plot to a jpeg
-file.name=paste("DailyGPP_2008_ctrl_vs_eCO2.jpeg")
+file.name=c("DailyGPP_2008_ctrl_vs_eCO2.jpeg")
 jpeg(file.name,width=1200, height=900)
 lw.set=2
 par(mar=c(5,5,3,2))

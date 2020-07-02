@@ -50,7 +50,7 @@ plot(GPP.ctrl,GPP.eCO2temp,type="p", col="dark green", pch=4, lwd=2, cex=1.5,
 title(expression(paste("Daily GPP (control vs elevated CO"[2]*" & warming)",sep="")),line=1.5,cex.main=3)
 lines(c(0,250),c(0,250),type="l",col="red",lwd=3,lty=2)
 
-#Four subplot
+# #Four subplot
 par(mar=c(4,6,8,4))
 RowID=c(1:dim(my.data)[1])
 RowID.noNA=RowID[is.na(GPP.ctrl)==FALSE]  #remove the rows with NAs
